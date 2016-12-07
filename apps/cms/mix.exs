@@ -22,7 +22,7 @@ defmodule Cms.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {Cms, []},
-     applications: [:phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext,
+     applications: [:phoenix, :phoenix_pubsub, :cowboy, :logger, :faker, :gettext,
                     :phoenix_ecto, :postgrex]]
   end
 
@@ -39,7 +39,11 @@ defmodule Cms.Mixfile do
      {:phoenix_ecto, "~> 3.0"},
      {:postgrex, ">= 0.0.0"},
      {:gettext, "~> 0.11"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:absinthe_plug, "~> 1.1"},
+     {:absinthe_ecto, git: "https://github.com/absinthe-graphql/absinthe_ecto.git"},
+     {:poison, "~> 2.1.0"},
+     {:faker, "~> 0.7"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.

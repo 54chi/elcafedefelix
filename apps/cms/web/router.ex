@@ -5,7 +5,14 @@ defmodule Cms.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", Cms do
-    pipe_through :api
-  end
+#  scope "/api", Cms do
+#    pipe_through :api
+#  end
+
+  forward "/graphiql", Absinthe.Plug.GraphiQL,
+    schema: Cms.Schema
+
+  forward "/", Absinthe.Plug,
+    schema: Cms.Schema
+
 end
