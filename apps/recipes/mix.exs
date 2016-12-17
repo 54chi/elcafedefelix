@@ -36,6 +36,7 @@ defmodule Recipes.Mixfile do
      {:phoenix_pubsub, "~> 1.0"},
      {:gettext, "~> 0.11"},
      {:bolt_sips, "~> 0.1"},
+     {:poison, "~> 2.1.0"},
      {:cowboy, "~> 1.0"}]
   end
 end

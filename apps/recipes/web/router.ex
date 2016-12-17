@@ -7,5 +7,7 @@ defmodule Recipes.Router do
 
   scope "/api", Recipes do
     pipe_through :api
+
+    get "/recipes", RecipeController, :search_by_name
   end
 end
