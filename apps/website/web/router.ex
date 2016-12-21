@@ -21,6 +21,7 @@ defmodule Website.Router do
 
   forward "/blog", Cms.Endpoint
   forward "/menu", Recipes.Endpoint
+  forward "/orders", Orders.Endpoint
 
   # Other scopes may use custom stacks.
   # scope "/api", Website do
