@@ -6,5 +6,9 @@ defmodule Orders.ReceiptView do
      %{ fecha: fecha, recibos: recibos}
   end
 
+  def render("receipts_by_day.json",_) do
+    %{errors: "Error"}
+  end
+
 
 end

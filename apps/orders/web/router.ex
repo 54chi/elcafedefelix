@@ -8,6 +8,16 @@ defmodule Orders.Router do
   scope "/api", Orders do
     pipe_through :api
 
-    get "/recibos", ReceiptController, :receipts_by_day
+    resources "/orders", OrderController
+    get "/recibos", ReceiptController, :show
+
+    #resources "/recibos", ReceiptController, only: [:show]
+
+# crear un recibo
+# agregar ordenes al reecibo
+# agregar productos a la orden
+# agregar variaciones a la ordenes
+
+
   end
 end
